@@ -1,0 +1,46 @@
+// Denne siden er KUN for @importering av styling-filer
+
+
+// IMPORT VARIABLES
+@import "./variables/variables";
+
+
+//IMPORT FONTS
+@import url("https://fonts.googleapis.com/css2?family=Lora&display=swap");
+
+
+// IMPORT MAIN 
+@import "./main";
+
+
+// IMPORT WELCOME
+@import "./welcome/index";
+
+
+// IMPORT STORE
+@import "./store/store";
+
+
+// IMPORT TRENDING
+@import "./trending/trending";
+@import "./trending/veiwport_trending";
+
+
+// IMPORT MYBOOKS
+@import "./books/books";
+
+
+// IMPORT ABOUT
+@import "./about/about";
+@import "./about/viewport_about";
+
+
+// IMPORT SIGN-IN
+@import "./signin/signin";
+
+
+// IMPORT SIGN-UP
+@import "./signup/signup";
+
+//IMPORT PASSWORDRESET
+@import "./password/password";

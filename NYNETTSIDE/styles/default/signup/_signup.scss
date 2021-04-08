@@ -1,0 +1,26 @@
+.container_signup {
+    a {
+        display: block;
+    }
+
+    p {
+        margin: 1em;
+        text-align: center;
+    }
+
+    hr {
+        margin: 0.5em;
+    }
+
+}
+
+.container_signin {
+    a {
+        color: $darkBlue;
+        text-decoration: none;
+
+        &:hover {
+            color: $lightBlue;
+        }
+    }
+}

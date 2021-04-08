@@ -1,0 +1,10 @@
+// MOBILE VIEWPORT
+@media only screen and (max-width: 641px) {
+    .trending{
+        background-color: $backgroundColor;
+        display: block;
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+    }
+}

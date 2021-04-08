@@ -1,0 +1,25 @@
+.mybooks {
+    display: grid;
+    
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas: 
+    "box5_1 box5_2 box5_3"
+    "box5_4 box5_5 box5_6";
+}
+
+
+.mybook_1{
+    grid-area: box5_1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.box4 {
+    margin-top: 10em;
+    margin-left: 1em;
+}

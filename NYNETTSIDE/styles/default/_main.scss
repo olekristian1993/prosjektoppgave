@@ -1,0 +1,430 @@
+// Denne siden er KUN for elementer som skal gjelde for alle sidene (AKA DEFAULT-STYLING).
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    
+    background-color: $backgroundColor;
+    height: 100vh;
+    display: grid;
+
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 6fr 1fr;
+
+    grid-template-areas:
+        "box1 box2 box3"
+        "box4 box5 box6"
+        "box7 box8 box9";
+
+    font-family: lora;
+}
+
+
+.box1 {
+    grid-area: box1;
+    display: block;
+
+    align-self: center;
+    text-align: center;
+
+    .minilogo1 {
+        display: block;
+        margin: 1em;
+    }
+
+    .sidepanel {
+        display: none;
+    }
+
+    .closebtn {
+        display: none;
+    }
+
+    .openbtn {
+        display: none;
+    }
+}
+
+.box2 {
+    display: block;
+    grid-area: box2;
+
+    justify-self: center;
+    align-self: center;
+
+    .nav1 {
+        display: block;
+        width: 100%;
+
+        li {
+            display: inline-block;
+            margin: 0.5em;
+            position: sticky;
+            
+            
+
+            a {
+                text-decoration: none;
+                list-style-type: none;
+                color: $navTxtColor;
+                font-size: 2em;
+                padding: 30px;
+                
+                
+
+                &:hover {
+                    font-size: 3em;
+                    text-shadow: 1px 1px $navTxtColor;
+                    transition: ease-in-out 400ms;
+                    
+                }
+            }
+        }
+    }
+
+    .minilogo2 {
+        display: none;
+    }
+    .navtab {
+        display: none;
+    }
+}
+
+.box3 {
+    grid-area: box3;
+    display: block;
+
+    justify-self: end;
+    align-self: center;
+
+    .loginknapp_default {
+        margin: 1em;
+        float: right;
+        background-image: linear-gradient(#026777, #00a2bb);
+        border-radius: 28px;
+        cursor: pointer;
+        color: #ffffff;
+        font-family: Arial;
+        font-size: 17px;
+        padding: 1em 1.9375em;
+        text-decoration: none;
+        text-shadow: 1px 1px 5px #01373f;
+
+        &:hover {
+            transition: ease-in 200ms;
+            background-image: linear-gradient($lightBlue, $blue);
+            box-shadow: 2px 2px 5px $darkBlue;
+        }
+
+        &:active {
+            top: 3em;
+            transition: ease-in 300ms;
+        }
+    }
+
+    .accountlogo {
+        margin: 1em;
+    }
+}
+
+.box4 {
+    grid-area: box4;
+    display: block;
+}
+
+.box5 {
+    grid-area: box5;
+    display: block;
+    
+}
+
+.box6 {
+    grid-area: box6;
+    display: block;
+}
+
+.box7 {
+    grid-area: box7;
+    display: block;
+}
+
+.box8 {
+    grid-area: box8;
+    display: block;
+
+
+    justify-self: center;
+    align-self: end;
+}
+
+.box9 {
+    grid-area: box9;
+    display: block;
+}
+
+// PAGE TRANSITION EFFECTS
+
+:root {
+  --primary: #AF1E2D;
+  --light: #F3F3F3;
+  --grey: blue;
+  --dark: #f8f5e7;
+}
+
+
+
+.transition-1 {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 101;
+  background-color: var(--dark);
+  opacity: 0;
+  pointer-events: none;
+  transition: 500ms ease-out;
+}
+
+.transition-1.is-active {
+  pointer-events: all;
+  opacity: 1;
+}
+
+.transition-2 {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  bottom: 0;
+  z-index: 101;
+  background-color: var(--dark);
+  transition: 500ms ease-out;
+}
+
+.transition-2.is-active {
+    display: block;
+  left: 0px;
+}
+
+.transition-3 {
+  position: fixed;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 101;
+  background-color: var(--dark);
+  transition: 500ms ease-out;
+}
+
+.transition-3.is-active {
+  top: 0;
+}
+
+
+
+
+
+
+
+// TABLET VIEWPORT
+
+@media only screen and (max-width: 1554px)  { 
+
+    body {
+        background-color:lightblue;
+
+        }
+    
+      .minilogo1 {
+            display: none;
+        }
+
+        .sidepanel {
+            display: block;
+
+            height: 250px; /* Specify a height */
+            width: 0; /* 0 width - change this with JavaScript */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Stay on top */
+            top: 0;
+            left: 0;
+            background-color: $navTxtColor; /* Black*/
+            overflow-x: hidden; /* Disable horizontal scroll */
+            padding-top: 8em; /* Place content 60px from the top */
+            transition: 500ms; /* 0.5 second transition effect to slide in the sidepanel */
+
+            a {
+                padding: 0.5rem;
+                text-decoration: none;
+                font-size: 1.5em;
+
+                color: $backgroundColor;
+                display: block;
+                transition: 0.3s;
+
+                &:hover {
+                    color: $navTxtColor;
+                }
+            }
+        }
+
+        .sidepanel .closebtn {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .openbtn {
+            display: block;
+            font-size: 2em;
+            cursor: pointer;
+            color: $navTxtColor;
+            background-color: $backgroundColor;
+            padding: 10px 15px;
+            border: none;
+
+            &:hover {
+                background-color: $navTxtColor;
+                color: $backgroundColor;
+            }
+        }
+        
+        .nav1 {
+            display: none;
+        }
+
+        .navtab {
+            display: block;
+        }
+}
+
+
+
+// MOBILE VIEWPORT
+
+@media only screen and (max-width: 641px) {
+  
+  body {
+    
+    background-color: $backgroundColor;
+    height: 100vh;
+    display: grid;
+
+    grid-template-columns: 1fr 3fr 1fr;
+    grid-template-rows: 1fr 6fr 1fr;
+
+    grid-template-areas:
+        "box1 box2 box3"
+        ". box5 ."
+        "box7 box8 box9";
+
+    font-family: lora;
+}
+  
+  
+    .box1 {
+        grid-area: box1;
+
+        .minilogo1 {
+            display: none;
+        }
+
+        .sidepanel {
+            display: block;
+
+            height: 250px; /* Specify a height */
+            width: 0; /* 0 width - change this with JavaScript */
+            position: fixed; /* Stay in place */
+            z-index: 1; /* Stay on top */
+            top: 0;
+            left: 0;
+            background-color: $navTxtColor; /* Black*/
+            overflow-x: hidden; /* Disable horizontal scroll */
+            padding-top: 8em; /* Place content 60px from the top */
+            transition: 500ms; /* 0.5 second transition effect to slide in the sidepanel */
+
+            a {
+                padding: 0.5rem;
+                text-decoration: none;
+                font-size: 1.5em;
+
+                color: $backgroundColor;
+                display: block;
+                transition: 0.3s;
+
+                &:hover {
+                    color: $navTxtColor;
+                }
+            }
+        }
+
+        .sidepanel .closebtn {
+            display: block;
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+        .openbtn {
+            display: block;
+            font-size: 2em;
+            cursor: pointer;
+            color: $navTxtColor;
+            background-color: $backgroundColor;
+            padding: 10px 15px;
+            border: none;
+
+            &:hover {
+                background-color: $navTxtColor;
+                color: $backgroundColor;
+            }
+        }
+    }
+
+    .box2 {
+        grid-area: box2;
+        display: block;
+
+        .nav1 {
+            display: none;
+        }
+
+        .minilogo2 {
+            display: block;
+        }
+    }
+
+    .box3 {
+        grid-area: box3;
+        display: none;
+    }
+
+    .box5 {
+        grid-area: box5;
+        display: block;
+        
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+        
+    }
+
+    .box8 {
+        p {
+            display: none;
+        }
+    }
+
+}

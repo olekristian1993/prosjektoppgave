@@ -1,0 +1,23 @@
+// MOBILE VIEWPORT
+
+@media only screen and (max-width: 641px) {
+    .founders {
+        background-color: $backgroundColor;
+        display: block;
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+        
+    }
+    .founder_image{
+        display: block;
+        width: 100px;
+        border-radius: 50%;
+        padding-top:20px;
+        justify-self: center;
+        align-self: center;
+    }
+    .founders_6{
+        padding-bottom: 20px;
+    }
+}

@@ -1,0 +1,185 @@
+.trending_headline {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.trending {
+    display: grid;
+    
+    
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+    grid-template-areas: 
+    "box5_1 box5_2 box5_3"
+    "box5_4 box5_5 box5_6";
+
+    h3 {
+        margin-top: 2rem;
+    }
+
+    h4 {
+        margin-top: 0.7rem;
+    }
+    
+    p {
+      font-size: 0.95rem;
+    }
+}
+
+.trending_1{
+    grid-area: box5_1;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.trending_2{
+    grid-area: box5_2;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-self: center;
+    justify-self: center;
+    
+}
+
+.trending_3{
+    grid-area: box5_3;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-self: center;
+    justify-self: center;
+}
+
+.trending_4{
+    grid-area: box5_4;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-self: center;
+    justify-self: center;
+    
+}
+
+.trending_5{
+    grid-area: box5_5;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-self: center;
+    justify-self: center;
+}
+
+.trending_6{
+    grid-area: box5_6;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    align-self: center;
+    justify-self: center;
+    
+}
+
+.book {
+  transform-style: preserve-3d;
+  position: relative;
+  height: 300px;
+  cursor: pointer;
+  backface-visibility: visible;
+}
+
+.book_cover{
+    height: 300px;
+    width: 200px;
+}
+
+.front, .back, .page1, .page2, .page3, .page4, .page5, .page6 {
+  transform-style: preserve-3d;
+  position: absolute;
+  width: 200px;
+  height: 100%;
+  top: 0; left: 0;
+  transform-origin: left center;
+  transition: transform .5s ease-in-out, box-shadow .35s ease-in-out;
+}
+
+.front, .back {
+  background: navy;
+}
+
+.front, .page1, .page3, .page5 {
+  border-bottom-right-radius: .5em;
+  border-top-right-radius: .5em;
+}
+
+.back, .page2, .page4, .page6 {
+  border-bottom-right-radius: .5em;
+  border-top-right-radius: .5em;
+}
+
+.page1 { 
+  background: #efefef;
+}
+
+.page2 {
+  background: #efefef;
+}
+
+.page3 {
+  background: #f5f5f5;
+}
+
+.page4 {
+  background: #f5f5f5;
+}
+
+.page5 {
+  background: #fafafa;
+}
+
+.page6 {
+  background: #fdfdfd;
+  text-align: center;
+}
+
+.book:hover .front {
+  transform: rotateY(-160deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+}
+
+.book:hover .page1 {
+  transform: rotateY(-150deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+}
+
+.book:hover .page2 {
+  transform: rotateY(0deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+}
+
+.book:hover .page3 {
+  transform: rotateY(-140deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+}
+
+.book:hover .page4 {
+  transform: rotateY(0deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+}
+
+.book:hover .page5 {
+  transform: rotateY(-130deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  
+}
+
+.book:hover .page6 {
+  transform: rotateY(-5deg) scale(1.1);
+  box-shadow: 0 1em 3em 0 rgba(0, 0, 0, .2);
+  
+}
+
+.book:hover .back {
+  transform: rotateY(0deg) scale(1.1);
+}
+
+// TEXT PANEL

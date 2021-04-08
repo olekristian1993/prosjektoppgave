@@ -1,0 +1,71 @@
+.title {
+        font-size: 2em;
+        color: $navTxtColor;
+        text-shadow: 1px 1px 2px;
+
+}
+
+
+
+.nav5 {
+        display: block;
+        
+        
+        ul {
+            text-align: center;
+            
+        }
+
+        li {
+            
+            display: inline-block;
+            margin: 0.5em;
+            min-width: 88.88px;
+            
+            
+
+            a {
+                
+                text-decoration: none;
+                list-style-type: none;
+                color: $navTxtColor;
+                font-size: 2em;
+                padding: 30px;
+
+                &:hover {
+                    font-size: 3em;
+                    text-shadow: 1px 1px $navTxtColor;
+                    transition: ease-in-out 300ms;
+                }
+            }
+        }
+    }
+
+.forsidebilde1 {
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+    @media only screen and (max-width: 641px) {
+
+    .forsidebilde1 {
+        display: none;
+}
+
+
+.forsidebilde2 {
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
+        width:200px;
+}
+
+
+        .nav5 {
+            display:none;
+        }
+
+
+
+    }
